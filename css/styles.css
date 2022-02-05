@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 :root {
     --primary: #01c897;
@@ -7,21 +7,42 @@
 
 body {
     background-color: #fafafa;
-    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', system-ui, 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+    padding: 0;
+}
+
+section {
+    width: 1200px;
 }
 
 article {
     margin-bottom: 3rem;
+    border-left: 4px solid var(--primary);
 }
 
 article > h1,
 article > h2 {
     margin-top: 0;
 }
-
 .pcolor,
 a {
     color: var(--primary);
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 3pt;
+    color: var(--primary);
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 200;
 }
 
 p {
@@ -30,10 +51,16 @@ p {
 
 header {
     padding: 0;
+    margin: 3rem 0rem 4.5rem;
 }
 
-header nav {
-    position: sticky;
+header a {
+    color: black;
+}
+
+header a:hover {
+    color: var(--primary);
+    text-decoration: none;
 }
 
 header nav ul {
@@ -41,6 +68,16 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 767px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav li {
+        margin-bottom: 1.5rem;
+    }
+}
+
 header a {
     font-weight: 400;
 }
@@ -48,7 +85,14 @@ header a {
 .button {
     display: inline-block;
     border: 2px solid var(--primary);
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+}
+.button:hover {
+    text-decoration: none;
+    color: var(--primary);
+    background-color: transparent;
 }
 
 .logo-container {
@@ -56,5 +100,11 @@ header a {
     justify-content: start;
     align-items: center;
     max-height: 40px;
-    width: 200px;
+    width: 350px;
+}
+
+@media (max-width: 767px) {
+    .logo-container {
+        margin-bottom: 2rem;
+    }
 }
