@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --primary: #01c897;
+    /*--primary: #082464;*/
+}
+
+body {
+    background-color: #fafafa;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+article > h1,
+article > h2 {
+    margin-top: 0;
+}
+
+.pcolor,
+a {
+    color: var(--primary);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+header {
+    padding: 0;
+}
+
+header nav {
+    position: sticky;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a {
+    font-weight: 400;
+}
+
+.button {
+    display: inline-block;
+    border: 2px solid var(--primary);
+    padding: 0.25rem 0.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    max-height: 40px;
+    width: 200px;
+}
