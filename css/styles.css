@@ -16,39 +16,6 @@ section {
     width: 1200px;
 }
 
-article {
-    margin-bottom: 3rem;
-    border-left: 4px solid var(--primary);
-}
-
-article > h1,
-article > h2 {
-    margin-top: 0;
-}
-.pcolor,
-a {
-    color: var(--primary);
-}
-
-h1,
-h2 {
-    text-transform: uppercase;
-    letter-spacing: 3pt;
-    color: var(--primary);
-}
-
-h1 {
-    font-weight: 400;
-}
-
-h2 {
-    font-weight: 200;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
 header {
     padding: 0;
     margin: 3rem 0rem 4.5rem;
@@ -82,6 +49,39 @@ header a {
     font-weight: 400;
 }
 
+article {
+    margin-bottom: 3rem;
+    border-left: 4px solid var(--primary);
+}
+
+article > h1,
+article > h2 {
+    margin-top: 0;
+}
+.pcolor,
+a {
+    color: var(--primary);
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 3pt;
+    color: var(--primary);
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
 .button {
     display: inline-block;
     border: 2px solid var(--primary);
@@ -107,4 +107,28 @@ header a {
     .logo-container {
         margin-bottom: 2rem;
     }
+}
+
+.main-teaser {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.main-teaser h1 {
+    text-align: right;
+    display: block;
+    height: 100%;
+    padding-right: 2rem;
+    border-right: 2px solid var(--primary);
+}
+
+.main-teaser h2 {
+    margin-top: 1rem;
+}
+
+.main-teaser ul {
+    list-style: none;
 }
