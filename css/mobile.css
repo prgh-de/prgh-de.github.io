@@ -1,0 +1,30 @@
+@media (max-width: 1300px) {
+    body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        min-height: 480px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav li {
+        margin: 0 0 1.5rem;
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .logo-container {
+        margin-bottom: 2rem;
+    }
+
+    #viktory ul {
+        flex-direction: column;
+    }
+}

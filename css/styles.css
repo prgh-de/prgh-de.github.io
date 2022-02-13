@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&display=swap');
 
 :root {
-    --primary: #01c897;
-    /*--primary: #082464;*/
+    --primary: #082464;
+    --si: #08c494;
 }
 
 body {
@@ -34,15 +35,22 @@ header nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
 }
-@media (max-width: 767px) {
-    header nav ul {
-        flex-direction: column;
-    }
 
-    header nav li {
-        margin-bottom: 1.5rem;
-    }
+header nav li {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 4px;
+}
+
+header nav li:hover {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+header nav li:first-child,
+header nav li:last-child {
+    border-bottom-color: transparent;
 }
 
 header a {
@@ -52,6 +60,12 @@ header a {
 article {
     margin-bottom: 3rem;
     border-left: 4px solid var(--primary);
+}
+
+article > img.float {
+    float: right;
+    height: 60px;
+    margin: -1rem -1rem 0 0;
 }
 
 article > h1,
@@ -78,6 +92,10 @@ h2 {
     font-weight: 200;
 }
 
+ul {
+    list-style-type: square;
+}
+
 p {
     margin-bottom: 1rem;
 }
@@ -94,19 +112,22 @@ p {
     color: var(--primary);
     background-color: transparent;
 }
-
-.logo-container {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    max-height: 40px;
-    width: 350px;
+.button:last-child {
+    margin-top: 1.5rem;
+}
+header .button:last-child {
+    margin-top: inherit;
 }
 
-@media (max-width: 767px) {
-    .logo-container {
-        margin-bottom: 2rem;
-    }
+.logo-container {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container a,
+.logo-container img {
+    display: inline-block;
 }
 
 .main-teaser {
@@ -131,4 +152,68 @@ p {
 
 .main-teaser ul {
     list-style: none;
+}
+
+#about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#about a {
+    font-weight: bold;
+}
+
+#about h2 {
+    margin-top: 0;
+}
+
+#about aside {
+    min-width: 25%;
+    margin-left: 3rem;
+    text-align: center;
+}
+
+#about figure h3 {
+    margin: 1rem auto 0.25rem;
+}
+
+#about figure h4 {
+    margin: 0.25rem auto;
+    font-weight: normal;
+}
+
+#career h4 {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+#career h4 span {
+    font-weight: normal;
+}
+
+.viktory-color {
+    font-family: 'Playfair Display', 'Open Sans', system-ui, 'Helvetica Neue',
+        Helvetica, Arial;
+    letter-spacing: 0;
+    color: #282424;
+    border-color: #282424;
+    text-transform: none;
+}
+.viktory-color ul {
+    margin: 0;
+    list-style-type: none;
+}
+.viktory-color ul ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.si-color {
+    border-color: var(--si);
+}
+
+.mcf-color {
+    color: var(--primary);
+    border-color: var(--primary);
 }
